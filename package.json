@@ -4,7 +4,7 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel --open",
     "build": "parcel build",
     "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url ."
   },
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0"
   }
 }
