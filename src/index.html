@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest</title>
+    <title>Pinterest - Пинтерест</title>
+    <link rel="icon" href="img/pinterest-logo.svg" type="image/svg">
     <link rel="stylesheet" href="./scss/style.scss">
     <script defer type="module" src="js/main.js"></script>
 </head>
 <body>
-    <h1>test</h1>
+    <div class="wrapper">
+        <header class="header-options">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                        <path
+                            d="M13 0C5.82 0 0 5.82 0 13c0 5.364 3.25 9.967 7.887 11.953-.03-.73-.046-1.854.102-2.425.229-.884 1.834-7.711 1.834-7.711s-.835-1.834-.245-3.307c.589-1.473 1.49-2.325 2.947-1.981 1.457.344 1.179 2.374 1.081 2.849s-.77 2.554-1.081 3.7c-.311 1.146.884 3.389 3.307 2.178 2.423-1.212 3.111-5.174 2.832-7.744-.278-2.571-3.684-4.797-7.515-3.602-3.831 1.195-4.281 4.846-4.281 6.115 0 1.326.745 2.284.909 2.456.164.172.221.401.221.401l-.368 1.481s-.295.581-1.081.057c-.786-.524-2.652-2.226-2.26-5.272.393-3.045 1.507-5.534 5.632-7.171 4.126-1.637 8.252-.229 10.544 2.521 2.292 2.751 1.932 7.531-.36 10.61-2.292 3.078-5.567 2.849-6.68 2.456-1.113-.393-1.768-1.375-1.768-1.375s-.982 3.929-1.146 4.453c-.104.332-.641 1.242-1.021 1.865A12.99 12.99 0 0 0 13 26c7.18 0 13-5.82 13-13S20.18 0 13 0z" />
+                    </svg>
+                    <h2>Pinterest</h2>
+                </a>
+            </div>
+            <div class="search">
+                <svg class="gUZ ztu U9O kVc" height="16" width="16" viewBox="0 0 24 24">
+                    <path
+                        d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m13.12 2.88-4.26-4.26A9.842 9.842 0 0 0 20 10c0-5.52-4.48-10-10-10S0 4.48 0 10s4.48 10 10 10c1.67 0 3.24-.41 4.62-1.14l4.26 4.26a3 3 0 0 0 4.24 0 3 3 0 0 0 0-4.24">
+                    </path>
+                </svg>
+                <input type="text" placeholder="Идеи простых блюд на ужин, модных образов и многое другое...">
+            </div>
+            <div class="boards">
+                <button class="boards-select-button">
+                    <p>Выбрать доску</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8,0c-4.41113,0 -8,3.58887 -8,8c0,4.41113 3.58887,8 8,8c4.41113,0 8,-3.58887 8,-8c0,-4.41113 -3.58887,-8 -8,-8Zm0,11l-5,-5h3l2,2l2,-2h3l-5,5Z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main class="cards-list">
+
+        </main>
+    </div>
 </body>
 </html>

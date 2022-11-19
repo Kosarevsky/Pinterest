@@ -1,0 +1,16 @@
+// ОБНУЛЕНИЕ
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Familjen Grotesk', sans-serif;
+}
+
+// ОБЁРТКА
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 15px;
+}
