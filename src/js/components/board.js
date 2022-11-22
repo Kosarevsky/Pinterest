@@ -1,7 +1,7 @@
 import createElement from "../utils/createElement";
 // существующие элементы
 const selectBoardButton = document.querySelector(".boards-select-button");
-const boardsWrapper = document.querySelector("boards-wrapper");
+const boardsWrapper = document.querySelector(".boards-wrapper");
 
 // создание элементов
 // временно
@@ -18,4 +18,4 @@ selectBoardButton?.addEventListener("click", () => {
 // добавление элементов
 boardsWrapper?.append(boardsWrapperContent);
 
-export default { element: boardsWrapper };
+export default { element: boardsWrapperContent };
