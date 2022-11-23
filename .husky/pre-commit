@@ -3,4 +3,4 @@
 
 # npm test
 # npm run format
-prettier --write .
+npx prettier --write .
