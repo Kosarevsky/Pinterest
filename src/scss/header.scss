@@ -1,4 +1,8 @@
 /* HEADER */
+.hidden {
+	display: none;
+}
+
 .header-options {
 	display: flex;
 	justify-content: space-between;
@@ -32,13 +36,13 @@
 
 	/* HEADER INPUT */
 	& .search {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 70%;
-	border: 2px solid #cdcdcd;
-	border-radius: 24px;
-	padding: 10px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 70%;
+		border: 2px solid #cdcdcd;
+		border-radius: 24px;
+		padding: 10px 0;
 
 		@media (max-width: 1024px) {
 			margin: 0 10px;
@@ -49,7 +53,7 @@
 			fill: #767676;
 			margin: 0 8px;
 		}
-		
+
 		& input {
 			width: 99%;
 			border: none;
@@ -96,7 +100,7 @@
 				background: #cfcdcd;
 			}
 
-				&.active {
+			&.active {
 				border: 2px solid #000;
 				background: #E60023;
 			}
@@ -130,7 +134,7 @@
 			&.active svg {
 				transform: rotate(0)
 			}
-			
+
 		}
 
 		// СТИЛИЗАЦИЯ ВСПЛЫВАЮЩЕГО ОКНА 
@@ -160,4 +164,68 @@
 			}
 		}
 	}
+}
+
+.cards {
+
+	& .cards-complain__button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 14px;
+		background: none;
+		border: 2px solid #767676;
+		border-radius: 24px;
+		background: #767676;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.cards-complain__cancel{
+		padding: 10px 24px;
+		background: none;
+		border: 2px solid #767676;
+		border-radius: 24px;
+		background: #767676;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.cards-complain__send{
+		padding: 10px 29.7px;
+		background: none;
+		border: 2px solid #767676;
+		border-radius: 24px;
+		background: #767676;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+
+	/* & .cards-complain__button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 10px 14px;
+		background: none;
+		border: 2px solid #767676;
+		border-radius: 24px;
+		background: #767676;
+		cursor: pointer;
+		transition: 0.3s; 
+
+		@media (max-width: 768px) {
+			justify-content: center;
+		}
+	} */
 }
