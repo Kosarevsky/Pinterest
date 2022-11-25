@@ -2,5 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npm test
-# npm run format
-npx prettier --write .
+npm run format
