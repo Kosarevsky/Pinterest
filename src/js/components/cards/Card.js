@@ -11,10 +11,15 @@ function Card(id, avatar, description, photo) {
     this.wrapperAvatar = null;
 
     this.createElements = function () {
-        this.element = createElement("div", { className: `card` });
+        this.element = createElement("div", { className: "card" });
 
         this.wrapperPhoto = createElement("div", {
             className: "card__wrapperPhoto",
+        });
+
+        this.dots = createElement("div", {
+            className: "card__dots",
+            textContent: "●●●",
         });
 
         this.wrapperDescription = createElement("div", {
@@ -37,13 +42,20 @@ function Card(id, avatar, description, photo) {
 
         this.description = createElement("p", {
             className: "card__description",
-            textContent: this.description,
+            textContent: this.description.slice(0, 15),
         });
 
-        this.wrapperPhoto.append(this.photo);
+        this.wrapperPhoto.append(this.photo, this.dots);
         this.wrapperDescription.append(this.wrapperAvatar, this.description);
         this.wrapperAvatar.append(this.avatar);
         this.element.append(this.wrapperPhoto, this.wrapperDescription);
+
+        this.photo.addEventListener("mouseover", () => {
+            this.dots.classList.toggle("show");
+        });
+        this.photo.addEventListener("mouseout", () => {
+            this.dots.classList.toggle("show");
+        });
     };
     this.createElements();
 }
