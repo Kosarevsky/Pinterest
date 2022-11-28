@@ -1,0 +1,34 @@
+.cards-list > section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.card {
+    margin: 15px auto 0;
+    &__wrapperPhoto {
+        border: 2px solid black;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 200px;
+        width: 150px;
+    }
+    &__photo,
+    &__avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__wrapperDescr {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__wrapperAvatar {
+        border: 1px solid black;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 35px;
+        width: 35px;
+        margin: 5px 0px;
+    }
+}
