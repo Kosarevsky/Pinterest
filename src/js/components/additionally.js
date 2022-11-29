@@ -1,17 +1,36 @@
-import createElement from "../utils/createElement";
+window.addEventListener('DOMContentLoaded', function () {
+	let modalComplain = document.getElementById("modalComplain");
+	let modal = document.getElementById("modalAdditionally");
+	let btn = document.getElementById("btnAdditionally");
+	let close = document.getElementsByClassName("additionaly-button__close")[0];
+	let add = document.getElementsByClassName("additionaly-button__add")[0];
+	let complainBtn = document.getElementsByClassName("additionaly-button__complain")[0];
 
-const cardsButtonAdditionally = document.querySelector('.cards-button__additionally');
-const cardsButton = document.querySelector('.cards-button');
+	function openModal() {
+		modal.style.display = "flex";
+	}
+	btn.addEventListener("click", openModal);
 
-const additionallyForm = createElement('div', { className: 'additionally-form' });
-/* const additionallyFormAdd = createElement('button', { textContent: 'Добавить на доску' });
-const additionallyFormComplain  = createElement('button', { textContent: 'Пожаловаться' }); */
+	function closeModalComplain() {
+		modal.style.display = "none";
+		modalComplain.style.display = "flex"; 
+	}
+	
+	complainBtn.addEventListener("click", closeModalComplain);
 
+ 	function closeModal() {
+		modal.style.display = "none";
+	}
+	close.addEventListener("click", closeModal); 
 
-cardsButtonAdditionally?.addEventListener('click', () => {
-	cardsButtonAdditionally?.classList.toggle('active');
-	cardsButton?.classList.toggle('active');
-});
+	function closeModalAdd() {
+		modal.style.display = "none";
+	}
+	add.addEventListener("click", closeModalAdd);
 
-cardsButton.append(additionallyForm);
-export default { element: additionallyForm};
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') {
+			modal.style.display = "none";
+		}
+	});
+})
