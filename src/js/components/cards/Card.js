@@ -51,12 +51,24 @@ function Card(id, avatar, description, photo) {
         this.element.append(this.wrapperPhoto, this.wrapperDescription);
 
         this.photo.addEventListener("mouseover", () => {
-            this.dots.classList.toggle("show");
+            this.visualEffect();
         });
         this.photo.addEventListener("mouseout", () => {
-            this.dots.classList.toggle("show");
+            this.visualEffect();
+        });
+
+        this.dots.addEventListener("mouseover", () => {
+            this.visualEffect();
+        });
+        this.dots.addEventListener("mouseout", () => {
+            this.visualEffect();
         });
     };
+    this.visualEffect = function () {
+        this.dots.classList.toggle("show");
+        this.photo.classList.toggle("dark");
+    };
+
     this.createElements();
 }
 

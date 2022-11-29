@@ -18,12 +18,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-
-        &:hover,
-        &:after {
-            opacity: 0.5;
-            transition: 0.1s;
-        }
     }
     &__dots {
         display: flex;
@@ -64,4 +58,9 @@
     z-index: 1;
     opacity: 1;
     transition: 0.2s;
+}
+
+.dark {
+    opacity: 0.5;
+    transition: 0.1s;
 }
