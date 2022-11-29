@@ -10,11 +10,15 @@
         <script defer type="module" src="js/main.js"></script>
     </head>
     <body>
+        <!-- <div class="spinner"></div> -->
         <div class="wrapper">
             <header class="header-options">
                 <div class="logo">
                     <a href="#" class="logo-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 26 26"
+                        >
                             <path
                                 d="M13 0C5.82 0 0 5.82 0 13c0 5.364 3.25 9.967 7.887 11.953-.03-.73-.046-1.854.102-2.425.229-.884 1.834-7.711 1.834-7.711s-.835-1.834-.245-3.307c.589-1.473 1.49-2.325 2.947-1.981 1.457.344 1.179 2.374 1.081 2.849s-.77 2.554-1.081 3.7c-.311 1.146.884 3.389 3.307 2.178 2.423-1.212 3.111-5.174 2.832-7.744-.278-2.571-3.684-4.797-7.515-3.602-3.831 1.195-4.281 4.846-4.281 6.115 0 1.326.745 2.284.909 2.456.164.172.221.401.221.401l-.368 1.481s-.295.581-1.081.057c-.786-.524-2.652-2.226-2.26-5.272.393-3.045 1.507-5.534 5.632-7.171 4.126-1.637 8.252-.229 10.544 2.521 2.292 2.751 1.932 7.531-.36 10.61-2.292 3.078-5.567 2.849-6.68 2.456-1.113-.393-1.768-1.375-1.768-1.375s-.982 3.929-1.146 4.453c-.104.332-.641 1.242-1.021 1.865A12.99 12.99 0 0 0 13 26c7.18 0 13-5.82 13-13S20.18 0 13 0z"
                             />
@@ -46,65 +50,139 @@
                 </div>
             </header>
         </div>
-            <main class="cards">
-                <div class="modal-content__complain">
-                    <button id="btnComplain" class="modal-content__button">Пожаловаться на пин</button>
-                    <div id="modalComplain" class="modal">
-                        <div class="modal-content">
-                            <h2 class="modal-content__text">Жалоба на пин</h2>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice1">Спам
-                                <p>Вводящие в заблуждение или повторяющиеся публикации</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice2">Изображения обнаженного тела или порнография
-                                <p>Содержимое сексуального характера</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice3">Членовредительство
-                                <p>Расстройства пищевого поведения, нанесение травм себе, суицид</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice4">Ложная информация
-                                <p>Ложная информация о здоровье, климате, голосованиях или теории заговора</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice5">Агрессивные действия
-                                <p>Предрассудки, стереотипы, идея превосходства белой расы, оскорбления</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice6">Опасные товары
-                                <p>Наркотики, оружие, регулируемые товары</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice7">Преследование или нарушение конфиденциальности
-                                <p>Оскорбления, угрозы, публикация персональных данных</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice8">Сцены насилия
-                                <p>Графическое изображение или пропаганда насилия</p>
-                            </label>
-                            <input class="modal-content__radio-button" type="radio" id="radioButton"><label
-                                for="contactChoice9">Это моя интеллектуальная собственность
-                                <p>Вводящие в заблуждение или повторяющиеся публикации</p>
-                            </label>
-                            <button class="modal-content__cancel">Cancel</button>
-                            <button class="modal-content__send">Send</button>
-                        </div>
+        <main class="cards">
+            <div class="modal-content__complain">
+                <button id="btnComplain" class="modal-content__button">
+                    Пожаловаться на пин
+                </button>
+                <div id="modalComplain" class="modal">
+                    <div class="modal-content">
+                        <h2 class="modal-content__text">Жалоба на пин</h2>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice1"
+                            >Спам
+                            <p>
+                                Вводящие в заблуждение или повторяющиеся
+                                публикации
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice2"
+                            >Изображения обнаженного тела или порнография
+                            <p>Содержимое сексуального характера</p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice3"
+                            >Членовредительство
+                            <p>
+                                Расстройства пищевого поведения, нанесение травм
+                                себе, суицид
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice4"
+                            >Ложная информация
+                            <p>
+                                Ложная информация о здоровье, климате,
+                                голосованиях или теории заговора
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice5"
+                            >Агрессивные действия
+                            <p>
+                                Предрассудки, стереотипы, идея превосходства
+                                белой расы, оскорбления
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice6"
+                            >Опасные товары
+                            <p>Наркотики, оружие, регулируемые товары</p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice7"
+                            >Преследование или нарушение конфиденциальности
+                            <p>
+                                Оскорбления, угрозы, публикация персональных
+                                данных
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice8"
+                            >Сцены насилия
+                            <p>
+                                Графическое изображение или пропаганда насилия
+                            </p>
+                        </label>
+                        <input
+                            class="modal-content__radio-button"
+                            type="radio"
+                            id="radioButton"
+                        /><label for="contactChoice9"
+                            >Это моя интеллектуальная собственность
+                            <p>
+                                Вводящие в заблуждение или повторяющиеся
+                                публикации
+                            </p>
+                        </label>
+                        <button class="modal-content__cancel">Cancel</button>
+                        <button class="modal-content__send">Send</button>
                     </div>
                 </div>
-                <div class="additionally-modal">
-                    <button id="btnAdditionally" class="additionally-modal__button">НО</button>
-                    <div id="modalAdditionally" class="additionally">
-                        <div class="additionally-content">
-                            <p class="additionally-content__info">Этот пин похож на те, которые вы недавно просматривали</p>
-                            <button class="additionally-button additionally-button__add">Добавить на доску</button>
-                            <button class="additionally-button additionally-button__close">Скрыть пин со страницы</button>
-                            <button class="additionally-button additionally-button__complain">Пожаловаться</button>
-                        </div>
+            </div>
+            <div class="additionally-modal">
+                <button id="btnAdditionally" class="additionally-modal__button">
+                    НО
+                </button>
+                <div id="modalAdditionally" class="additionally">
+                    <div class="additionally-content">
+                        <p class="additionally-content__info">
+                            Этот пин похож на те, которые вы недавно
+                            просматривали
+                        </p>
+                        <button
+                            class="additionally-button additionally-button__add"
+                        >
+                            Добавить на доску
+                        </button>
+                        <button
+                            class="additionally-button additionally-button__close"
+                        >
+                            Скрыть пин со страницы
+                        </button>
+                        <button
+                            class="additionally-button additionally-button__complain"
+                        >
+                            Пожаловаться
+                        </button>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </body>
 </html>
