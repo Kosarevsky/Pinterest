@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     let modalComplain = document.getElementById("modalComplain");
     let modal = document.getElementById("modalAdditionally");
-    let btn = document.getElementById("btnAdditionally");
+    let btn = document.getElementsByClassName("card__dots")[0];
     let close = document.getElementsByClassName(
         "additionally-button__close",
     )[0];
@@ -9,11 +9,6 @@ window.addEventListener("DOMContentLoaded", function () {
     let complainBtn = document.getElementsByClassName(
         "additionally-button__complain",
     )[0];
-
-    function openModal() {
-        modal.style.display = "flex";
-    }
-    btn.addEventListener("click", openModal);
 
     function closeModalComplain() {
         modal.style.display = "none";

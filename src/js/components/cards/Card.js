@@ -1,5 +1,5 @@
 import createElement from "../../utils/createElement";
-
+let modalAdditionally = document.getElementById("modalAdditionally");
 function Card(id, avatar, description, photo) {
     this.id = id;
     this.avatar = avatar;
@@ -17,7 +17,7 @@ function Card(id, avatar, description, photo) {
             className: "card__wrapperPhoto",
         });
 
-        this.dots = createElement("div", {
+        this.dots = createElement("button", {
             className: "card__dots",
             textContent: "●●●",
         });
@@ -62,6 +62,9 @@ function Card(id, avatar, description, photo) {
         });
         this.dots.addEventListener("mouseout", () => {
             this.visualEffect();
+        });
+        this.dots.addEventListener("click", () => {
+            modalAdditionally.style.display = "flex";
         });
     };
     this.visualEffect = function () {

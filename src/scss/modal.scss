@@ -1,36 +1,26 @@
 .cards {
-    .modal-content__button {
-        padding: 10px 14px;
-        border: 2px solid #767676;
-        border-radius: 24px;
-        background: #767676;
-        cursor: pointer;
-        transition: 0.3s;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
     .modal {
-        margin: 0 auto;
-        z-index: 9;
+        position: absolute;
+        margin: 20px 310px;
         display: none;
+        justify-content: center;
+        z-index: 10;
         border-radius: 15px;
         background-color: rgb(255, 255, 255);
         text-align: left;
-        width: 45%;
+        width: 35%;
         padding: 30px 30px;
         overflow-y: auto;
         @media (max-width: 768px) {
-            justify-content: center;
             width: 100%;
         }
 
         .modal-content {
+            position: relative;
             & > label {
                 margin-left: 5px;
                 & > p {
-                    margin: 5px 18px;
+                    margin: 2px 18px;
                     font-size: 10px;
                     color: #767676;
                 }
@@ -83,30 +73,21 @@
         }
     }
 
-    .additionally-modal__button {
-        padding: 10px 14px;
-        border: 2px solid #767676;
-        border-radius: 24px;
-        background: #767676;
-        cursor: pointer;
-        transition: 0.3s;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 20px;
-    }
-
     .additionally {
-        margin: 0 auto;
-        z-index: 9;
+        position: absolute;
+        margin: 150px 350px;
         display: none;
         border-radius: 15px;
         background-color: rgb(255, 255, 255);
         text-align: left;
-        width: 35%;
-        padding: 30px 30px;
-        overflow-y: auto;
+        width: 30%;
+        padding: 30px 10px;
         justify-content: center;
+        z-index: 10;
+
+        .additionally-content {
+            position: relative;
+        }
 
         .additionally-button {
             display: flex;
@@ -123,7 +104,7 @@
                 padding: 5px;
                 border-radius: 5px;
                 background: #e4e2e2;
-                width: 80%;
+                width: 95%;
                 justify-content: flex-start;
             }
         }

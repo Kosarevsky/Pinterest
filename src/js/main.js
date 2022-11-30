@@ -1,7 +1,7 @@
+import additionally from "./components/additionally";
 import board from "./components/board.js";
 import cards from "./components/cards";
 import complain from "./components/complain";
-import additionally from "./components/additionally";
 
 cards.getCards();
 document.querySelector(".boards-wrapper")?.append(board.element);

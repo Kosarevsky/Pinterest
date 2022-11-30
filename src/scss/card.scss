@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 10px;
+    position: relative;
+    z-index: 1;
 }
 .card {
     margin: 15px auto 0;
