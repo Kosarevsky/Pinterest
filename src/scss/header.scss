@@ -98,6 +98,7 @@
             &.active {
                 border: 2px solid #000;
                 background: #e60023;
+                z-index: 10;
             }
 
             & p {
@@ -147,7 +148,7 @@
 
             &.active {
                 opacity: 1;
-                z-index: 1;
+                z-index: 10 !important;
                 top: 100%;
             }
 

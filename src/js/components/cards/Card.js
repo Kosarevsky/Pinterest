@@ -1,5 +1,6 @@
 import createElement from "../../utils/createElement";
-let modalAdditionally = document.getElementById("modalAdditionally");
+let modal = document.getElementById("modalAdditionally");
+let modalComplain = document.getElementById("modalComplain");
 function Card(id, avatar, description, photo) {
     this.id = id;
     this.avatar = avatar;
@@ -64,7 +65,8 @@ function Card(id, avatar, description, photo) {
             this.visualEffect();
         });
         this.dots.addEventListener("click", () => {
-            modalAdditionally.style.display = "flex";
+            modal.style.display = "flex";
+            modalComplain.style.display = "none";
         });
     };
     this.visualEffect = function () {

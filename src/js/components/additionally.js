@@ -1,3 +1,17 @@
+const classForClick = [
+    "card__dots",
+    "modalAdditionally",
+    "additionally-button",
+];
+
+function isClickHidden(elementName) {
+    const arrayOfElementClasses = elementName.split(" ");
+    for (singalClass in arrayOfElementClasses) {
+        if (arrayOfElementClasses.includes(singalClass)) return true;
+    }
+    return false;
+}
+
 window.addEventListener("DOMContentLoaded", function () {
     let modalComplain = document.getElementById("modalComplain");
     let modal = document.getElementById("modalAdditionally");
@@ -14,7 +28,6 @@ window.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
         modalComplain.style.display = "flex";
     }
-
     complainBtn.addEventListener("click", closeModalComplain);
 
     function closeModal() {
@@ -30,6 +43,16 @@ window.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             modal.style.display = "none";
+        }
+    });
+
+    document.addEventListener("click", function (e) {
+        const targetClass = e.target.className;
+        if (isClickHidden(targetClass)) {
+            modal.style.display = "none";
+        }
+        if (isClickHidden(targetClass)) {
+            modalComplain.style.display = "none";
         }
     });
 });
