@@ -6,10 +6,10 @@ const classForClick = [
 
 function isClickHidden(elementName) {
     const arrayOfElementClasses = elementName.split(" ");
-    for (singalClass in arrayOfElementClasses) {
-        if (arrayOfElementClasses.includes(singalClass)) return true;
+    for (let singalClass of arrayOfElementClasses) {
+        if (classForClick.includes(singalClass)) return false;
     }
-    return false;
+    return true;
 }
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -50,8 +50,6 @@ window.addEventListener("DOMContentLoaded", function () {
         const targetClass = e.target.className;
         if (isClickHidden(targetClass)) {
             modal.style.display = "none";
-        }
-        if (isClickHidden(targetClass)) {
             modalComplain.style.display = "none";
         }
     });

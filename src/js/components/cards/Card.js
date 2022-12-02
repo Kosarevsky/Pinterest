@@ -18,7 +18,7 @@ function Card(id, avatar, description, photo) {
             className: "card__wrapperPhoto",
         });
 
-        this.dots = createElement("button", {
+        this.dots = createElement("div", {
             className: "card__dots",
             textContent: "●●●",
         });
