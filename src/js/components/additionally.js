@@ -1,56 +1,68 @@
-const classForClick = [
-    "card__dots",
-    "modalAdditionally",
-    "additionally-button",
-];
+import createElement from "../utils/createElement";
+import modalComplain from "./complain";
 
-function isClickHidden(elementName) {
-    const arrayOfElementClasses = elementName.split(" ");
-    for (let singalClass of arrayOfElementClasses) {
-        if (classForClick.includes(singalClass)) return false;
-    }
-    return true;
+const additionally = createElement("div", {
+    className: "additionally",
+});
+const form = createElement("div", {
+    className: "additionally-content",
+});
+
+const formTitle = createElement("p", {
+    textContent: "Этот пин похож на те, которые вы недавно просматривали",
+});
+
+const additionallyWrapper = createElement("div", {
+    className: "additionally-button",
+});
+const buttonClosePin = createElement("button", {
+    className: "additionally-button additionally-button__close",
+    textContent: "Скрыть пин",
+});
+const buttonAddPin = createElement("button", {
+    className: "additionally-button additionally-button__add",
+    textContent: "Добавить на доску",
+});
+const buttonComplainPin = createElement("button", {
+    className: "additionally-button additionally-button__complain",
+    textContent: "Пожаловаться на пин",
+});
+additionallyWrapper.append(buttonClosePin, buttonAddPin, buttonComplainPin);
+
+form.append(formTitle, additionallyWrapper);
+additionally.append(form);
+
+const backdrop = createElement("div", { className: "backdrop hide" });
+backdrop.addEventListener("click", closeModal);
+
+buttonClosePin.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeModal();
+});
+
+buttonAddPin.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeModal();
+});
+
+function closeModal() {
+    additionally.open = false;
+    backdrop.classList.add("hide");
 }
 
-window.addEventListener("DOMContentLoaded", function () {
-    let modalComplain = document.getElementById("modalComplain");
-    let modal = document.getElementById("modalAdditionally");
-    let btn = document.getElementsByClassName("card__dots")[0];
-    let close = document.getElementsByClassName(
-        "additionally-button__close",
-    )[0];
-    let add = document.getElementsByClassName("additionally-button__add")[0];
-    let complainBtn = document.getElementsByClassName(
-        "additionally-button__complain",
-    )[0];
+function openModal() {
+    additionally.open = true;
+    console.log(additionally.openModal);
+    backdrop.classList.remove("hide");
+}
 
-    function closeModalComplain() {
-        modal.style.display = "none";
-        modalComplain.style.display = "flex";
-    }
-    complainBtn.addEventListener("click", closeModalComplain);
+const wrapper = createElement("div");
+wrapper.append(backdrop, additionally);
 
-    function closeModal() {
-        modal.style.display = "none";
-    }
-    close.addEventListener("click", closeModal);
+const modalObj = {
+    element: wrapper,
+    closeModal,
+    openModal,
+};
 
-    function closeModalAdd() {
-        modal.style.display = "none";
-    }
-    add.addEventListener("click", closeModalAdd);
-
-    document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-            modal.style.display = "none";
-        }
-    });
-
-    document.addEventListener("click", function (e) {
-        const targetClass = e.target.className;
-        if (isClickHidden(targetClass)) {
-            modal.style.display = "none";
-            modalComplain.style.display = "none";
-        }
-    });
-});
+export default modalObj;

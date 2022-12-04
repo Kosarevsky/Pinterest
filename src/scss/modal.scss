@@ -1,10 +1,22 @@
-.cards {
+.modals {
     display: flex;
     justify-content: center;
-    .modal {
+    .backdrop {
         position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.34);
+    }
+
+    .backdrop.hide {
+        opacity: 0;
+        z-index: -1;
+    }
+    .complain {
         margin-top: 90px;
-        display: none;
+        /* display: none; */
         justify-content: center;
         z-index: 10;
         border-radius: 15px;
@@ -25,7 +37,7 @@
             padding: 10px 10px;
         }
 
-        .modal-content {
+        .complain-content {
             position: relative;
             & > label {
                 margin-left: 5px;
@@ -46,7 +58,7 @@
             }
         }
 
-        .modal-content__cancel {
+        .complain-content__cancel {
             padding: 10px 24px;
             background: none;
             border: 2px solid #767676;
@@ -63,7 +75,7 @@
             }
         }
 
-        .modal-content__send {
+        .complain-content__send {
             padding: 10px 29.7px;
             background: none;
             border: 2px solid #767676;
@@ -93,8 +105,7 @@
     }
 
     .additionally {
-        position: absolute;
-        display: none;
+        /* display: none; */
         border-radius: 15px;
         background-color: rgb(255, 255, 255);
         text-align: left;
@@ -138,6 +149,7 @@
             align-content: center;
             align-items: center;
             height: 30px;
+            width: 95%;
             &:hover {
                 border-radius: 5px;
                 background: #e4e2e2;
