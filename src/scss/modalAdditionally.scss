@@ -1,20 +1,20 @@
+.backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 5;
+}
+
+.backdrop.hide {
+    opacity: 0;
+    z-index: -1;
+}
 .modals {
     display: flex;
     justify-content: center;
-    .backdrop {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.34);
-        z-index: 5;
-    }
-
-    .backdrop.hide {
-        opacity: 0;
-        z-index: -1;
-    }
 
     .additionally {
         /* display: none; */
