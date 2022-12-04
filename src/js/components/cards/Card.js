@@ -65,7 +65,7 @@ function Card(id, avatar, description, photo) {
             this.visualEffect();
         });
         this.dots.addEventListener("click", () => {
-            additionally.openModal();
+            additionally.openModalAdditionally();
         });
     };
     this.visualEffect = function () {

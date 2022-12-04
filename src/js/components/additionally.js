@@ -1,10 +1,11 @@
 import createElement from "../utils/createElement";
-import modalComplain from "./complain";
+import complain from "./complain";
 
-const additionally = createElement("div", {
+const backdrop = createElement("div", { className: "backdrop hide" });
+const additionally = createElement("dialog", {
     className: "additionally",
 });
-const form = createElement("div", {
+const additionallyContent = createElement("div", {
     className: "additionally-content",
 });
 
@@ -12,9 +13,6 @@ const formTitle = createElement("p", {
     textContent: "Этот пин похож на те, которые вы недавно просматривали",
 });
 
-const additionallyWrapper = createElement("div", {
-    className: "additionally-button",
-});
 const buttonClosePin = createElement("button", {
     className: "additionally-button additionally-button__close",
     textContent: "Скрыть пин",
@@ -27,32 +25,39 @@ const buttonComplainPin = createElement("button", {
     className: "additionally-button additionally-button__complain",
     textContent: "Пожаловаться на пин",
 });
-additionallyWrapper.append(buttonClosePin, buttonAddPin, buttonComplainPin);
 
-form.append(formTitle, additionallyWrapper);
-additionally.append(form);
+additionallyContent.append(
+    formTitle,
+    buttonClosePin,
+    buttonAddPin,
+    buttonComplainPin,
+);
+additionally.append(additionallyContent);
 
-const backdrop = createElement("div", { className: "backdrop hide" });
-backdrop.addEventListener("click", closeModal);
+backdrop.addEventListener("click", closeModalAdditionally);
 
 buttonClosePin.addEventListener("click", (event) => {
     event.stopPropagation();
-    closeModal();
+    closeModalAdditionally();
 });
 
 buttonAddPin.addEventListener("click", (event) => {
     event.stopPropagation();
-    closeModal();
+    closeModalAdditionally();
 });
 
-function closeModal() {
+buttonComplainPin.addEventListener("click", () => {
+    closeModalAdditionally();
+    complain.openModalComplain();
+});
+
+function closeModalAdditionally() {
     additionally.open = false;
     backdrop.classList.add("hide");
 }
 
-function openModal() {
+function openModalAdditionally() {
     additionally.open = true;
-    console.log(additionally.openModal);
     backdrop.classList.remove("hide");
 }
 
@@ -61,8 +66,8 @@ wrapper.append(backdrop, additionally);
 
 const modalObj = {
     element: wrapper,
-    closeModal,
-    openModal,
+    closeModalAdditionally,
+    openModalAdditionally,
 };
 
 export default modalObj;

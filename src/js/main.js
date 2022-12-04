@@ -5,6 +5,7 @@ import complain from "./components/complain";
 
 cards.getCards();
 document.querySelector(".cards-list")?.append(cards.element);
-document.querySelector(".modals")?.append(additionally.element);
-document.querySelector(".modals")?.append(complain.element);
+document
+    .querySelector(".modals")
+    ?.append(additionally.element, complain.element);
 document.querySelector(".boards-wrapper")?.append(board.element);
