@@ -1,0 +1,134 @@
+.modals {
+    .complain {
+        border: none;
+        justify-content: center;
+        z-index: 10;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        text-align: left;
+        width: 540px;
+        height: 650px;
+        padding: 30px 30px;
+        overflow: auto;
+        margin: -50px auto;
+        @media (max-width: 1024px) {
+            width: 450px;
+        }
+        @media (max-width: 768px) {
+            width: 370px;
+        }
+        @media (max-width: 375px) {
+            width: 300px;
+        }
+
+        .complain-content h2 {
+            text-align: center;
+            font-size: 27px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .complain-content__input {
+            position: relative;
+            & > label {
+                position: absolute;
+                margin-left: 5px;
+                align-items: center;
+                text-align: center;
+                margin-top: 3px;
+                margin-bottom: 2px;
+                @media (max-width: 1024px) {
+                    font-size: 8px;
+                    margin-left: 3px;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    font-size: 4px;
+                    text-align: left;
+                    margin-left: 3px;
+                }
+                @media (max-width: 375px) {
+                    width: 100%;
+                    font-size: 4px;
+                    margin-top: -2px;
+                }
+            }
+            & > p {
+                margin-left: 32px;
+                margin-bottom: 7px;
+                font-size: 8px;
+                color: #767676;
+                @media (max-width: 1024px) {
+                    font-size: 8px;
+                    margin-left: 25px;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 7px;
+                    font-size: 6px;
+                    margin-left: 20px;
+                }
+                @media (max-width: 375px) {
+                    font-size: 4px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .modal-content__radio-button {
+            height: 25px;
+            width: 25px;
+            @media (max-width: 1024px) {
+                height: 20px;
+                width: 20px;
+            }
+            @media (max-width: 768px) {
+                height: 18px;
+                width: 18px;
+            }
+            @media (max-width: 375px) {
+                height: 16px;
+                width: 16px;
+            }
+        }
+
+        .complain-content__button {
+            background: none;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: rgb(44, 43, 43);
+            font-size: 14px;
+            font-weight: 600;
+            margin: 10px 0px 10px 10px;
+            float: right;
+        }
+
+        .complain-content__button-close {
+            padding: 15px 24px;
+            border: none;
+            background: #e8e6e6;
+            &:hover {
+                background: #cccccc;
+            }
+        }
+
+        .complain-content__button-send {
+            padding: 15px 29.7px;
+            background: #e1e0e0;
+            border: none;
+            color: #767676;
+        }
+
+        .modal-content__p {
+            font-size: 10px;
+            color: #5e5d5d;
+            margin-bottom: 10px;
+        }
+
+        .modal-content__text {
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
