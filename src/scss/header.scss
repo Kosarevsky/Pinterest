@@ -1,11 +1,13 @@
-/* HEADER */
+.hidden {
+    display: none;
+}
+
 .header-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 16px 0;
 
-    /* HEADER LOGO */
     & .logo a {
         display: flex;
         justify-content: space-between;
@@ -30,7 +32,6 @@
         }
     }
 
-    /* HEADER INPUT */
     & .search {
         display: flex;
         justify-content: space-between;
@@ -68,12 +69,164 @@
         }
     }
 
-    /* HEADER SELECT BOARD */
     .boards {
         position: relative;
         width: 15%;
 
-        // СТИЛИЗАЦИЯ КНОПКИ
+        & .boards-select-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 14px;
+            background: none;
+            border: 2px solid #767676;
+            border-radius: 24px;
+            background: #767676;
+            cursor: pointer;
+            transition: 0.3s;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+
+            &:hover {
+                border: 2px solid #000;
+                background: #cfcdcd;
+            }
+
+            &.active {
+                border: 2px solid #000;
+                background: #e60023;
+                z-index: 10;
+            }
+
+            & p {
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+
+                @media (max-width: 1200px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 1024px) {
+                    font-size: 10px;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            & svg {
+                width: 22px;
+                height: 22px;
+                fill: #fff;
+                transform: rotate(540deg);
+                transition: 0.5s;
+            }
+
+            &.active svg {
+                transform: rotate(0);
+            }
+        }
+
+        .boards-wrapper {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            margin-top: 10px;
+            padding: 20px;
+            border: 2px solid #767676;
+            border-radius: 24px;
+            text-align: center;
+            transition: 0.3s ease;
+            opacity: 0;
+            z-index: -1;
+
+            &.active {
+                opacity: 1;
+                z-index: 10 !important;
+                top: 100%;
+            }
+
+            & p {
+                overflow-wrap: break-word;
+            }
+        }
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+
+    & .logo a {
+        display: flex;
+        justify-content: space-between;
+
+        & > svg {
+            width: 36px;
+            padding: 0 4px;
+            fill: #e60023;
+
+            @media (max-width: 768px) {
+                width: 48px;
+            }
+        }
+
+        & > h2 {
+            padding: 0 4px;
+            color: #e60023;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    & .search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        border: 2px solid #cdcdcd;
+        border-radius: 24px;
+        padding: 10px 0;
+
+        @media (max-width: 1024px) {
+            margin: 0 10px;
+        }
+
+        & svg {
+            width: 16px;
+            fill: #767676;
+            margin: 0 8px;
+        }
+
+        & input {
+            width: 99%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            overflow: hidden;
+            margin: 0 2px;
+
+            &::placeholder {
+                color: #cfcdcd;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .boards {
+        position: relative;
+        width: 15%;
+
         & .boards-select-button {
             display: flex;
             justify-content: space-between;
@@ -132,7 +285,6 @@
             }
         }
 
-        // СТИЛИЗАЦИЯ ВСПЛЫВАЮЩЕГО ОКНА
         .boards-wrapper {
             position: absolute;
             left: 0;
@@ -165,7 +317,6 @@
             }
 
             &-button {
-
                 & button {
                     width: 100%;
                     border: 1px solid #000;
@@ -181,7 +332,6 @@
                 }
 
                 &_add {
-
                     &:hover {
                         background: #008000;
                         color: #fff;
@@ -189,7 +339,6 @@
                 }
 
                 &_delete-all {
-
                     &:hover {
                         background: #e60023;
                         color: #fff;
@@ -198,7 +347,6 @@
             }
 
             &-list {
-
                 &-item {
                     position: relative;
                     display: flex;

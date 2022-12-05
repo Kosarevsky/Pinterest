@@ -2,11 +2,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 10px;
+    position: relative;
+    z-index: 1;
 }
 .card {
     margin: 15px auto 0;
     &__wrapperPhoto {
-        // border: 1px solid black;
         border-radius: 20px;
         overflow: hidden;
         height: 230px;
@@ -20,6 +21,7 @@
         object-fit: cover;
     }
     &__dots {
+        cursor: pointer;
         display: flex;
         width: 35px;
         height: 35px;
@@ -33,6 +35,7 @@
         background-color: #d4d2d0;
         z-index: -1;
         opacity: 0;
+        border: none !important;
     }
     &__wrapperDescr {
         display: flex;
@@ -40,7 +43,6 @@
         gap: 10px;
     }
     &__wrapperAvatar {
-        border: 1px solid black;
         border-radius: 50%;
         overflow: hidden;
         height: 35px;
