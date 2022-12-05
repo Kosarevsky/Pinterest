@@ -51,7 +51,7 @@ const BoardData = function (id = findFreeId(), title = "Доска " + id) {
     this.id = id;
     this.title = title;
 
-    console.log(boardsStorage);
+    // console.log(boardsStorage);
 };
 
 function addBoardItem({ id, title }) {

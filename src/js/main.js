@@ -10,4 +10,4 @@ document.querySelector(".cards-list")?.append(cards.element);
 document
     .querySelector(".modals")
     ?.append(additionally.element, complain.element);
-document.querySelector(".boards-wrapper")?.append(board.element);
+//document.querySelector(".boards-wrapper")?.append(board.element);
