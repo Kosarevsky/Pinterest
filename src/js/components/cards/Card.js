@@ -73,6 +73,17 @@ function Card(id, avatar, description, photo) {
         this.photo.classList.toggle("dark");
     };
 
+    this.show = function () {
+        this.element.style.display = "block";
+        this.hide = false;
+        //this.element.classList.add("show");
+    };
+    this.hide = function () {
+        this.element.style.display = "none";
+        this.hide = true;
+        // this.element.classList.add("hide");
+    };
+
     this.createElements();
 }
 
