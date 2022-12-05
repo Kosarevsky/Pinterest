@@ -10,7 +10,6 @@ selectBoardButton?.addEventListener("click", () => {
 
 export default { element: boardsWrapper };
 
-// update
 const boardsList = document.querySelector(`.boards-wrapper-list`);
 const boardAddButton = document.querySelector(".boards-wrapper-button_add");
 const boardDeleteAllButton = document.querySelector(
@@ -50,8 +49,6 @@ const findFreeId = function () {
 const BoardData = function (id = findFreeId(), title = "Доска " + id) {
     this.id = id;
     this.title = title;
-
-    // console.log(boardsStorage);
 };
 
 function addBoardItem({ id, title }) {
@@ -62,7 +59,6 @@ function addBoardItem({ id, title }) {
         className: `boards-wrapper-list-item_title`,
         textContent: `${title}`,
     });
-    // const boardsWrapperListItem
     const boardsWrapperListItemRename = createElement(`p`, {
         className: `boards-wrapper-list-item_rename`,
         textContent: "📝",
@@ -146,5 +142,16 @@ function addBoardItem({ id, title }) {
     );
     boardsList.append(boardsWrapperListItem);
 }
+
+const body = document.body;
+const boards = document.querySelector(".boards");
+
+body.addEventListener("click", (event) => {
+    const checkBoardsClick = event.path.find((item) => item === boards);
+    if (checkBoardsClick === undefined) {
+        selectBoardButton?.classList.remove("active");
+        boardsWrapper?.classList.remove("active");
+    }
+});
 
 export { addBoardItem, BoardData, boardsStorage };
