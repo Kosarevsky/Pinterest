@@ -1,4 +1,5 @@
 import createElement from "../../utils/createElement";
+import additionally from "../additionally";
 
 function Card(id, avatar, description, photo) {
     this.id = id;
@@ -62,6 +63,9 @@ function Card(id, avatar, description, photo) {
         });
         this.dots.addEventListener("mouseout", () => {
             this.visualEffect();
+        });
+        this.dots.addEventListener("click", () => {
+            additionally.openModalAdditionally();
         });
     };
     this.visualEffect = function () {
