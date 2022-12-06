@@ -1,18 +1,26 @@
 {
-  "name": "pinterest",
-  "version": "1.0.0",
-  "description": "",
-  "source": "src/index.html",
-  "scripts": {
-    "start": "parcel --open",
-    "build": "parcel build",
-    "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.0",
-    "parcel": "^2.8.0"
-  }
+    "name": "pinterest",
+    "version": "1.0.0",
+    "description": "",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel --open",
+        "build": "parcel build",
+        "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url .",
+        "prepare": "husky install",
+        "format": "lint-staged"
+    },
+    "lint-staged": {
+        "*": "prettier --write"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.0.3",
+        "parcel": "^2.8.0",
+        "prettier": "^2.8.0"
+    }
 }
